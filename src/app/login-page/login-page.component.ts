@@ -17,7 +17,12 @@ export class LoginPageComponent {
   users!: User[];
   constructor(private router: Router, private httpService: UserService) {} // Inject Router in the constructor
   ngOnInit() {
-    this.httpService.getAllUsers().subscribe((data) => (this.users = data));
+    console.log('ngOnInit() called');
+    this.httpService.getAllUsers().subscribe((data) => {
+      this.users = data;
+      console.log('users: ' + this.users);
+    });
+    console.log('users: ' + this.users);
   }
   onSubmit() {
     console.log('email: ' + this.email);

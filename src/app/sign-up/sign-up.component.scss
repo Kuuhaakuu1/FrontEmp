@@ -11,36 +11,15 @@ section {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 2px;
   flex-wrap: wrap;
   overflow: hidden;
+  background-image: url("../../assets/images/Schedule.jpg");
+  background-size: cover;
 }
-/*section::before 
 
-Verticale lines droping from the top to bottom of the screen animation.
-
-{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#d90505,rgb(155, 16, 174),#aac406);
-  animation: animate 5s linear infinite;
-  
-}
-@keyframes animate 
-{
-  0%
-  {
-    transform: translateY(-100%);
-  }
-  100%
-  {
-    transform: translateY(100%);
-  }
-}*/
 span {
   position: relative;
   display: block;
@@ -54,9 +33,6 @@ span:hover {
   opacity: 0.1;
   transition: 0s;
 }
-/*
-Green color : #0f0
-*/
 
 .signin {
   position: absolute;
@@ -66,6 +42,7 @@ Green color : #0f0
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 95px;
   padding: 40px;
   border-radius: 4px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
@@ -132,6 +109,14 @@ form {
 .links a {
   color: #fff;
   text-decoration: none;
+}
+.goHome {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.goHome i {
+  margin-left: 5px;
 }
 .links a:nth-child(2) {
   color: #fff;

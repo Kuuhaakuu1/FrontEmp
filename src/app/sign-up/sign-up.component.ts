@@ -9,20 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignupPageComponent {
-  email: any;
+  username: any;
+  mail: any;
   password: any;
-  firstName: any;
-  lastName: any;
-  salary: any;
-  dateSalary: any;
-  amount: any;
 
   constructor(private router: Router, private httpService: UserService) {} // Inject Router in the constructor
   onSubmit() {
     const user: User = {
-      id: 0,
-      username: this.firstName,
-      mail: this.email,
+      // id: 0,
+      username: this.username,
+      mail: this.mail,
       password: this.password,
     };
 
@@ -31,11 +27,11 @@ export class SignupPageComponent {
         // Handle success response
         console.log('User added successfully:', response);
         this.router.navigate(['/login']);
-      },
-      (error) => {
-        // Handle error response
-        console.error('Error adding user:', error);
       }
+      // (error) => {
+      //   // Handle error response
+      //   console.error('Error adding user:', error);
+      // }
     );
   }
 }

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from "@angular/core";
-import { scheduler } from "dhtmlx-scheduler";
+import * as scheduler from "dhtmlx-scheduler";
 import { EventService } from "../services/event.service";
 
 

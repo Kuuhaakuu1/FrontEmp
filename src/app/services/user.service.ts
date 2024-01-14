@@ -19,6 +19,7 @@ export class UserService {
   }
 
   public createUser(user: User): Observable<User> {
-    return this.http.post<User>(this.url + '/', user);
+    console.log('User to be added:', user);
+    return this.http.post<User>(this.url, user);
   }
 }
